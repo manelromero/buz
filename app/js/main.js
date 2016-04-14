@@ -1,13 +1,25 @@
 $(document).ready(function (){
 	// Burger menu
-  $('.burger').click(function() {
-    $('#burger-menu').slideToggle(200);
-    $('.burger').toggleClass('close');
-  });
+	$('.burger').click(function() {
+		$('#burger-menu').slideToggle(200);
+		$('.burger').toggleClass('close');
+		$('body').toggleClass('no-scroll');
+	});
+	// Option click event handler
+	$('.option').click(function() {
+		$('.option').removeClass('active');
+		$(this).addClass('active');
+		$('.burger').removeClass('close');
+		$('#burger-menu').hide();
+		$('body').removeClass('no-scroll');
+		$('.tab').hide();
+		$('#' + this.name).fadeIn(600);
+	});
+
 
 	function pictures() {
 		$('#picture').css({
-			'background': 'url("https://unsplash.it/' + $(window).width() + '/400?image=972") no-repeat bottom'
+			'background': 'url("https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=' + $(window).width() + '&w=400&fit=crop") no-repeat bottom'
 		});
 	}
 
