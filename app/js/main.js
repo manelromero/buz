@@ -1,4 +1,9 @@
 $(document).ready(function (){
+	// Burger menu
+  $('.burger').click(function() {
+    $('#burger-menu').slideToggle(200);
+    $('.burger').toggleClass('close');
+  });
 
 	function pictures() {
 		$('#picture').css({
@@ -11,7 +16,7 @@ $(document).ready(function (){
 	$(window).scroll(function() {
 		/* Check the location of each desired element */
 		$('.appear').each(function() {
-			var bottom_of_object = $(this).offset().top + $(this).outerHeight() - 50;
+			var bottom_of_object = $(this).offset().top + 100; // $(this).outerHeight() - 50;
 			var bottom_of_window = $(window).scrollTop() + $(window).height();
 			/* If the object is completely visible in the window, fade it in */
 			if(bottom_of_window > bottom_of_object) {
