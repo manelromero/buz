@@ -3,7 +3,7 @@ $(document).ready(function (){
 	$('.burger').click(function() {
 		$('#burger-menu').slideToggle(200);
 		$('.burger').toggleClass('close');
-		$('body').toggleClass('no-scroll');
+		$('#wrapper').toggleClass('no-scroll');
 	});
 	// Option click event handler
 	$('.option').click(function() {
@@ -11,7 +11,7 @@ $(document).ready(function (){
 		$(this).addClass('active');
 		$('.burger').removeClass('close');
 		$('#burger-menu').hide();
-		$('body').removeClass('no-scroll');
+		$('#wrapper').removeClass('no-scroll');
 		$('.tab').hide();
 		$('#' + this.name).fadeIn(600);
 	});
