@@ -35,13 +35,9 @@ h3 {
 	color: #2e3d49;
 }
 
-nav {
-	display: none;
-}
-
 section {
+	width: 100%;
 	padding: 2rem 0;
-	margin: auto;
 }
 
 footer {
@@ -64,6 +60,12 @@ li {
 }
 
 /* Other */
+.navbar {
+	float: right;
+	display: none;
+	flex-wrap: wrap;
+}
+
 .no-scroll {
 	position: fixed;
 }
@@ -75,8 +77,9 @@ li {
 }
 
 .top-bar {
-	width: 100%;
+	width: 80%;
 	height: 60px;
+	float: left;
 	/*position: fixed;*/
 	display: flex;
 	background-color: #fff;
@@ -94,10 +97,28 @@ li {
 
 .burger {
 	width: 20%;
-	max-width: 75px;
-	height: 100%;
-	background: url('../images/burger-open.svg') no-repeat center;
-	background-size: 35%;
+	/*max-width: 75px;*/
+	height: 60px;
+	float: left;
+	/*background: url('../images/burger-open.svg') no-repeat center;*/
+	/*background-size: 35%;*/
+}
+
+.burger-icon {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 20px;
+	top: 15px;
+}
+
+#burger-icon-close {
+	display: none;
+}
+
+.close {
+	background: url('../images/burger-close.svg') no-repeat center;
+	background-size: 30%;
 }
 
 .social-media,
@@ -118,23 +139,16 @@ li {
 	z-index: 10;
 }
 
-.close {
-	background: url('../images/burger-close.svg') no-repeat center;
-	background-size: 30%;
-}
-
 .appear {
 	opacity: 0;
 }
 
-.navbar {
-	float: right;
-	display: flex;
-	flex-wrap: wrap;
+.menu {
+	width: 100%;
 }
 
 .nav-link {
-	font: 400 1.2rem/3rem 'Open Sans', sans-serif;
+	font: 400 1rem/3rem 'Open Sans', sans-serif;
 	float: left;
 	padding: 0 15px;
 }
@@ -148,13 +162,22 @@ li {
 	/*padding-top: 60px;*/
 }
 
+.articles {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.article {
+	padding: 2rem 0;
+}
+
 .outstand {
 	background-color: #ececec;
 }
 
 .picture {
 	width: 100vw;
-	height: 30vh;
+	height: 40vh;
 	position: relative;
 	left: calc(-50vw + 50%);
 	display: flex;
@@ -236,4 +259,47 @@ li {
 	border-bottom-color: rgb(75, 198, 223);
 }
 
+/* Media queries*/
+@media only screen and (min-width: 540px) {
 
+	html {
+		font-size: 110%;
+	}
+
+	.top-bar {
+		width: 100%;
+	}
+
+	.burger {
+		display: none;
+	}
+
+	.navbar {
+		display: flex;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	html {
+		font-size: 115%;
+	}
+
+	.article {
+		width: 33.3%;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+	html {
+		font-size: 120%;
+	}
+
+}
