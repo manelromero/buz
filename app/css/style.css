@@ -16,8 +16,17 @@ body {
 	color: #757c81;
 }
 
+header {
+	max-width: 900px;
+	margin: auto;
+}
+
 p {
 	text-align: justify;
+}
+
+a {
+	text-decoration: none;
 }
 
 h1 {
@@ -45,7 +54,7 @@ footer {
 	background-color: #ff8000;
 }
 
-ul {
+/*ul {
 	width: 70%;
 	margin: auto;
 	list-style-type: none;
@@ -57,7 +66,7 @@ li {
 	height: 20%;
 	font: 600 1.5rem/12vh 'Open Sans', sans-serif;
 	text-align: center;
-}
+}*/
 
 /* Other */
 .navbar {
@@ -70,8 +79,9 @@ li {
 	position: fixed;
 }
 
-.section-content {
+.article-content {
 	width: 90%;
+	max-width: 900px;
 	margin: auto;
 	text-align: center;
 }
@@ -157,6 +167,10 @@ li {
 	padding-left: 0;
 }
 
+.wrapper {
+	margin: auto;
+}
+
 .container {
 	margin: auto;
 	/*padding-top: 60px;*/
@@ -168,6 +182,7 @@ li {
 }
 
 .article {
+	width: 100%;
 	padding: 2rem 0;
 }
 
@@ -260,7 +275,7 @@ li {
 }
 
 /* Media queries*/
-@media only screen and (min-width: 540px) {
+@media screen and (min-width: 540px) {
 
 	html {
 		font-size: 110%;
@@ -274,32 +289,28 @@ li {
 		display: none;
 	}
 
-	.navbar {
-		display: flex;
+}
+
+@media screen and (min-width: 768px) {
+
+	html {
+		font-size: 105%;
 	}
 
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
+
+	html {
+		font-size: 110%;
+	}
+
+}
+
+@media screen and (min-width: 1200px) {
 
 	html {
 		font-size: 115%;
-	}
-
-	.article {
-		width: 33.3%;
-	}
-
-}
-
-@media only screen and (min-width: 992px) {
-
-}
-
-@media only screen and (min-width: 1200px) {
-
-	html {
-		font-size: 120%;
 	}
 
 }

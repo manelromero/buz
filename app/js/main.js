@@ -1,23 +1,18 @@
 $(document).ready(function (){
 	// Burger menu
 	$('.burger').click(function() {
-		$('#burger-menu').slideToggle(200);
+		$('.burger-menu').slideToggle(200);
 		$('#burger-icon-open').fadeToggle();
 		$('#burger-icon-close').fadeToggle();
 		$('#wrapper').toggleClass('no-scroll');
 	});
-	// Option click event handler
-	$('.option').click(function() {
-		$('.option').removeClass('active');
-		$(this).addClass('active');
-		$('#burger-icon-open').fadeToggle();
+	// Burger menu option click event handler
+	$('.burger-menu a').click(function() {
 		$('#burger-icon-close').fadeToggle();
-		$('#burger-menu').slideToggle(200);
+		$('#burger-icon-open').fadeToggle();
+		$('.burger-menu').slideToggle(200);
 		$('#wrapper').removeClass('no-scroll');
-		$('.tab').hide();
-		$('#' + this.name).fadeIn(600);
 	});
-
 
 	function pictures() {
 		$('#picture').css({

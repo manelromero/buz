@@ -7,8 +7,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/menu.css">
 	<script src="js/main.js"></script>
+	<script src="js/menu.js"></script>
 </head>
+
+
 <body>
 
 	<div id="wrapper">
@@ -16,7 +20,7 @@
 		<header>
 
 			<!-- Burger menu -->
-			<div id="burger-menu" class="burger-menu">
+<!-- 			<div id="burger-menu" class="burger-menu">
 				<ul>
 					<li>
 						<a href="index.html" name="home" class="option">Home</a>
@@ -35,6 +39,28 @@
 					</li>
 				</ul>
 			</div>
+ -->
+
+			<nav class="burger-menu menu">
+				<ul class="menu-list">
+					<li class="menu-item menu-current">
+						<a href="#" class="menu-link">Home</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">About us</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">Services</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">User Stories</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">Contact us</a>
+					</li>
+				</ul>
+			</nav>
+
 
 			<!-- Top bar -->
 			<div class="top-bar">
@@ -59,26 +85,24 @@
 			</div>
 
 			<!-- Navigation bar -->
-			<nav class="navbar">
-
-				<div class="menu">
-					<div class="nav-link">
-						<a href="index.html" class="option">Home</a>
-					</div>
-					<div class="nav-link">
-						<a href="about_us.html" class="option">About us</a>
-					</div>
-					<div class="nav-link">
-						<a href="#" class="option">Services</a>
-					</div>
-					<div class="nav-link">
-						<a href="#" class="option">User Stories</a>
-					</div>
-					<div class="nav-link">
-						<a href="#" class="option">Contact us</a>
-					</div>
-				</div>
-
+			<nav class="menu">
+				<ul class="menu-list">
+					<li class="menu-item menu-current">
+						<a href="#" class="menu-link">Home</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">About us</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">Services</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">User Stories</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">Contact us</a>
+					</li>
+				</ul>
 			</nav>
 
 		</header>
@@ -90,20 +114,20 @@
 			</div>
 
 			<section>
-				<div class="section-content">
+				<div class="article-content">
 					<img src="http://placehold.it/150x150" class="section-picture" alt="Love">
 					<p>We love small businesses. We think you guys are brave creative, so <a href="#" class="underline">are we</a>.</p>
 				</div>
 			</section>
 
 			<section class="outstand">
-				<div class="section-content">
+				<div class="article-content">
 					<p>You have too many things to do and have no time to analyze the information available to you in order to make right decisions. We are here to help.</p>
 				</div>
 			</section>
 
 			<section class="appear">
-				<div class="section-content">
+				<div class="article-content">
 					<h1>How will we help you growth?</h1>
 				</div>
 			</section>
@@ -111,7 +135,7 @@
 			<div class="articles">
 
 				<div class="article appear">
-					<div class="section-content">
+					<div class="article-content">
 						<img src="http://placehold.it/150x150" class="section-picture" alt="Seed">
 						<h2>Plant the seed</h2>
 						<p>We plant the seed or in the online world we will build an effective Website which will help you to find right customers for your business. SEO and Analytics are included in the package! You will be able to target right audience from the beginning and understand your statistics through monthly Analytics reports! Yes, we will gather statistics available to you and help you to understand it. If you already have the website, we will help you to analyze your numbers and improve it.</p>
@@ -119,7 +143,7 @@
 				</div>
 
 				<div class="article appear">
-					<div class="section-content">
+					<div class="article-content">
 						<img src="http://placehold.it/150x150" class="section-picture" alt="Grow">
 						<h2>Grow</h2>
 						<p>We will then help you to grow or in the online world we will be growing your client base. If your product or service will need better positioning online, we will help you to build effective landing page in order to attract right audience. We will then advertise your product or services to the right audience on the right channels to help you grow. We will show you the statistics and help you to understand the numbers available to you in order to make right decisions to grow further.</p>
@@ -127,7 +151,7 @@
 				</div>
 
 				<div class="article appear">
-					<div class="section-content">
+					<div class="article-content">
 						<img src="http://placehold.it/150x150" class="section-picture" alt="Blossom">
 						<h2>Blossom</h2>
 						<p>We will help you to blossom. Once we see that you are growing and ready to expand further, we will bring your campaigns to the next level and replicate your success on the additional marketing channels to enable you to grow further within your country or abroad.  Want to advertise to expats living in Thailand, for example? We know how!</p>
@@ -136,11 +160,40 @@
 
 			</div>
 
-			<footer></footer>
-
 		</div>
 
+		<footer></footer>
+
 	</div>
+
+
+<script>
+	(function() {
+		[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+			var menuItems = menu.querySelectorAll('.menu-link'),
+				setCurrent = function(ev) {
+					ev.preventDefault();
+
+					var item = ev.target.parentNode; // li
+
+					// return if already current
+					if( classie.has(item, 'menu-current') ) {
+						return false;
+					}
+					// remove current
+					classie.remove(menu.querySelector('.menu-current'), 'menu-current');
+					// set current
+					classie.add(item, 'menu-current');
+				};
+
+			[].slice.call(menuItems).forEach(function(el) {
+				el.addEventListener('click', setCurrent);
+			});
+		});
+
+	})(window);
+</script>
+
 
 </body>
 </html>
