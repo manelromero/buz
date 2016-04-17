@@ -135,7 +135,7 @@ li {
 .search {
 	font: 300 1rem/3rem 'Open Sans', sans-serif;
 	padding: .3rem;
-	color: #ff8000;
+	color: #f18a2e;
 }
 
 .burger-menu {
@@ -260,18 +260,18 @@ li {
 }
 
 .underline {
-	color: rgb(199, 0, 167);
-	border-bottom-color: rgba(199, 0, 167, 0);
+	color: rgb(172, 33, 146);
+	border-bottom-color: rgba(172, 33, 146, 0);
 }
 
 .underline:hover,
 .underline:focus {
-	border-bottom-color: rgba(199, 0, 167, 1);
+	border-bottom-color: rgba(172, 33, 146, 1);
 }
 
 .underline:active {
-	color: rgb(75, 198, 223);
-	border-bottom-color: rgb(75, 198, 223);
+	color: rgb(241, 138, 46);
+	border-bottom-color: rgb(241, 138, 46);
 }
 
 /* Media queries*/
@@ -286,6 +286,10 @@ li {
 	}
 
 	.burger {
+		display: none;
+	}
+
+	.burger-menu {
 		display: none;
 	}
 

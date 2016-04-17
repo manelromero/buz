@@ -1,7 +1,9 @@
 /* Common styles for all menus */
 .menu {
 	display: none;
-	margin: 0 auto 1.5rem;
+	width: 100%;
+	/*margin: 0 auto 1.5rem;*/
+	margin-bottom: 1.5rem;
 }
 
 .menu-list {
@@ -17,11 +19,11 @@
 .menu-link {
 	position: relative;
 	text-align: center;
-	font: 600 1.5rem 'Open Sans', sans-serif;
+	font: 400 1.5rem 'Open Sans', sans-serif;
 	display: block;
 	margin: 0 1.5rem;
 	padding: 0.6rem 0;
-	color: #b5b5b5;
+	color: #333;
 	cursor: pointer;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
@@ -32,24 +34,23 @@
 
 .menu-link:hover,
 .menu-link:focus {
-	color: #929292;
+	color: #999;
 	outline: none;
 }
 
 /* Individual styles */
 
 .menu-current .menu-link {
-	color: #d94f5c;
+	color: #e92c3e;
 }
 
 .menu-link::before {
 	content: '';
-	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 4px;
-	background: #d94f5c;
+	background: #e92c3e;
 	-webkit-transform: scale3d(0, 1, 1);
 	transform: scale3d(0, 1, 1);
 	-webkit-transition: -webkit-transform 0.1s;
@@ -75,6 +76,14 @@
 
 	.menu-list {
 		display: flex;
+	}
+
+	.menu-link {
+		font: 400 1rem 'Open Sans', sans-serif;
+	}
+
+	.menu-link::before {
+		position: absolute;
 	}
 
 }

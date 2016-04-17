@@ -10,7 +10,7 @@ $(document).ready(function (){
 	$('.burger-menu a').click(function() {
 		$('#burger-icon-close').fadeToggle();
 		$('#burger-icon-open').fadeToggle();
-		$('.burger-menu').slideToggle(200);
+		$('.burger-menu').slideToggle(500);
 		$('#wrapper').removeClass('no-scroll');
 	});
 

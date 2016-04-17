@@ -41,7 +41,7 @@
 			</div>
  -->
 
-			<nav class="burger-menu menu">
+			<nav class="burger-menu">
 				<ul class="menu-list">
 					<li class="menu-item menu-current">
 						<a href="#" class="menu-link">Home</a>
@@ -70,8 +70,8 @@
 				</div>
 
 				<div class="social">
-					<div class="social-media">Social media</div>
-					<div class="search">Search</div>
+					<div class="social-media">social media</div>
+					<div class="search">search</div>
 				</div>
 
 			</div>
@@ -169,7 +169,7 @@
 
 <script>
 	(function() {
-		[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+		[].slice.call(document.querySelectorAll('.menu-list')).forEach(function(menu) {
 			var menuItems = menu.querySelectorAll('.menu-link'),
 				setCurrent = function(ev) {
 					ev.preventDefault();
