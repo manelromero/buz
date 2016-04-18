@@ -1,6 +1,6 @@
 $(document).ready(function (){
   // Activate home tab
-  $('#home').fadeIn(500);
+  $('#services').fadeIn(500);
 	// Burger menu
 	$('.burger').click(function() {
 		$('.burger-menu').slideToggle(300);

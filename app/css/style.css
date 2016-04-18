@@ -110,6 +110,10 @@ footer {
 	background-size: 30%;
 }
 
+.left {
+	text-align: left;
+}
+
 .social-media,
 .search {
 	font: 300 1rem/3rem 'Open Sans', sans-serif;
@@ -166,8 +170,8 @@ footer {
 }
 
 .picture-text {
-	width: 80%;
-	padding: .5rem;
+	padding: 0.5rem;
+	margin: 2rem;
 	font: normal 1.2rem 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	text-align: center;
@@ -179,7 +183,7 @@ footer {
 .menu {
 	display: none;
 	width: 100%;
-	margin-bottom: 1.5rem;
+	/*margin-bottom: 1.5rem;*/
 }
 
 .menu-list {
@@ -189,7 +193,12 @@ footer {
 
 .menu-item {
 	display: block;
+	margin-bottom: 1rem;
+}
+
+.burger-menu .menu-item {
 	height: 15vh;
+	margin-bottom: 0;
 }
 
 .menu-link {
@@ -314,6 +323,10 @@ footer {
 		margin: 0 1.5rem;
 	}
 
+	.picture-text {
+		font: 600 1.3rem 'Open Sans', sans-serif;
+	}
+
 }
 
 @media screen and (min-width: 992px) {
@@ -322,12 +335,30 @@ footer {
 		font-size: 110%;
 	}
 
+	.picture-text {
+		font: 600 1.5rem 'Open Sans', sans-serif;
+	}
+
 }
 
 @media screen and (min-width: 1200px) {
 
 	html {
 		font-size: 115%;
+	}
+
+	.picture-text {
+		padding: 0.7rem;
+		font: 600 1.7rem 'Open Sans', sans-serif;
+	}
+
+}
+
+@media screen and (min-width: 1800px) {
+
+	.picture-text {
+		padding: 1rem;
+		font: 600 2.3rem 'Open Sans', sans-serif;
 	}
 
 }
