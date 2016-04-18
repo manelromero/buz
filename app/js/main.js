@@ -1,7 +1,9 @@
 $(document).ready(function (){
+  // Activate home tab
+  $('#home').fadeIn(500);
 	// Burger menu
 	$('.burger').click(function() {
-		$('.burger-menu').slideToggle(200);
+		$('.burger-menu').slideToggle(300);
 		$('#burger-icon-open').fadeToggle();
 		$('#burger-icon-close').fadeToggle();
 		$('#wrapper').toggleClass('no-scroll');
@@ -10,8 +12,19 @@ $(document).ready(function (){
 	$('.burger-menu a').click(function() {
 		$('#burger-icon-close').fadeToggle();
 		$('#burger-icon-open').fadeToggle();
-		$('.burger-menu').slideToggle(500);
+		$('.burger-menu').slideToggle(300);
 		$('#wrapper').removeClass('no-scroll');
+		var newTab = this.name;
+    $('.tab').fadeOut(200).promise().done(function() {
+    	$('#' + newTab).fadeIn(500);
+    });
+	});
+	// Menu option click event handler
+	$('.menu a').click(function() {
+		var newTab = this.name;
+    $('.tab').fadeOut(500).promise().done(function() {
+    	$('#' + newTab).fadeIn(500);
+    });
 	});
 
 	function pictures() {

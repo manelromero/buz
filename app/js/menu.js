@@ -15,6 +15,29 @@
 
 'use strict';
 
+[].slice.call(document.querySelectorAll('.menu-list')).forEach(function(menu) {
+  var menuItems = menu.querySelectorAll('.menu-link'),
+    setCurrent = function(ev) {
+      ev.preventDefault();
+
+      var item = ev.target.parentNode; // li
+
+      // return if already current
+      if( classie.has(item, 'menu-current') ) {
+        return false;
+      }
+      // remove current
+      classie.remove(menu.querySelector('.menu-current'), 'menu-current');
+      // set current
+      classie.add(item, 'menu-current');
+    };
+
+  [].slice.call(menuItems).forEach(function(el) {
+    el.addEventListener('click', setCurrent);
+  });
+});
+
+
 // class helper functions from bonzo https://github.com/ded/bonzo
 
 function classReg( className ) {
