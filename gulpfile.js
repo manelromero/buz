@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 		cssnano = require('gulp-cssnano'),
 		autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('serve', function() {
+gulp.task('server', function() {
 	browserSync.init({
 		server: {
 			baseDir: "app"

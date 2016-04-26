@@ -1,12 +1,19 @@
 $(document).ready(function (){
   // Activate home tab
-  $('#services').fadeIn(500);
+  $('#home').fadeIn(500);
 	// Burger menu
 	$('.burger').click(function() {
 		$('.burger-menu').slideToggle(300);
-		$('#burger-icon-open').fadeToggle();
-		$('#burger-icon-close').fadeToggle();
 		$('#wrapper').toggleClass('no-scroll');
+		if ($('#burger-icon-close').css('display') == 'none') {
+			$('#burger-icon-open').fadeOut(300).promise().done(function() {
+				$('#burger-icon-close').fadeIn(300);
+			});
+		} else {
+			$('#burger-icon-close').fadeOut(300).promise().done(function() {
+				$('#burger-icon-open').fadeIn(300);
+			});
+		}
 	});
 	// Burger menu option click event handler
 	$('.burger-menu a').click(function() {
@@ -15,21 +22,21 @@ $(document).ready(function (){
 		$('.burger-menu').slideToggle(300);
 		$('#wrapper').removeClass('no-scroll');
 		var newTab = this.name;
-    $('.tab').fadeOut(200).promise().done(function() {
-    	$('#' + newTab).fadeIn(500);
-    });
+	    $('.tab').fadeOut(200).promise().done(function() {
+	    	$('#' + newTab).fadeIn(500);
+	    });
 	});
 	// Menu option click event handler
 	$('.menu a').click(function() {
-		var newTab = this.name;
-    $('.tab').fadeOut(500).promise().done(function() {
-    	$('#' + newTab).fadeIn(500);
-    });
+			var newTab = this.name;
+	    $('.tab').fadeOut(500).promise().done(function() {
+	    	$('#' + newTab).fadeIn(500);
+	    });
 	});
 
 	function pictures() {
 		$('#picture').css({
-			'background': 'url("https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?fit=crop&crop=bottom&w=' + $(window).width() + '&h=' + $(window).height() * 0.4 + '") no-repeat'
+			'background': 'url("https://images.unsplash.com/photo-1452800185063-6db5e12b8e2e?auto=compress&fit=crop&crop=bottom&w=' + $(window).width() + '&h=' + $(window).height() * 0.4 + '") no-repeat'
 		});
 	}
 
