@@ -36,26 +36,35 @@ $(document).ready(function (){
 
 	function pictures() {
 		$('#picture').css({
-			'background': 'url("https://images.unsplash.com/photo-1452800185063-6db5e12b8e2e?auto=compress&fit=crop&crop=bottom&w=' + $(window).width() + '&h=' + $(window).height() * 0.4 + '") no-repeat'
+			'background': 'url("images/picture.jpg") no-repeat',
+			'background-position': 'bottom',
+			'background-size': 'cover'
 		});
-	}
+	};
+
+	function appear() {
+		$('.appear').each(function() {
+			var bottom_of_object = $(this).offset().top + 100; // $(this).outerHeight() - 50;
+			var bottom_of_window = $(window).scrollTop() + $(window).height();
+			// If the object is completely visible in the window, fade it in
+			if (bottom_of_window > bottom_of_object) {
+				$(this).animate({'opacity': '1'}, 600);
+			}
+		});
+	};
 
 	pictures();
+	appear();
+
+	$(window).scroll(function() {
+		appear();
+	});
 
 	$(window).resize(function(){
 		pictures();
 	});
 
-	$(window).scroll(function() {
-		/* Check the location of each desired element */
-		$('.appear').each(function() {
-			var bottom_of_object = $(this).offset().top + 100; // $(this).outerHeight() - 50;
-			var bottom_of_window = $(window).scrollTop() + $(window).height();
-			/* If the object is completely visible in the window, fade it in */
-			if(bottom_of_window > bottom_of_object) {
-				$(this).animate({'opacity': '1'}, 600);
-			}
-		});
-	});
+
+
 
 });
