@@ -1,6 +1,6 @@
 $(document).ready(function (){
-  // Activate home tab
-  $('#home').fadeIn(500);
+	// Activate home tab
+	$('.tab').fadeIn(600);
 	// Burger menu
 	$('.burger').click(function() {
 		$('.burger-menu').slideToggle(300);
@@ -26,17 +26,10 @@ $(document).ready(function (){
 	    	$('#' + newTab).fadeIn(500);
 	    });
 	});
-	// Menu option click event handler
-	$('.menu a').click(function() {
-			var newTab = this.name;
-	    $('.tab').fadeOut(500).promise().done(function() {
-	    	$('#' + newTab).fadeIn(500);
-	    });
-	});
 
 	function pictures() {
 		$('#picture').css({
-			'background': 'url("images/picture.jpg") no-repeat',
+			'background': 'url("static/img/picture.jpg") no-repeat',
 			'background-position': 'bottom',
 			'background-size': 'cover'
 		});
@@ -63,8 +56,5 @@ $(document).ready(function (){
 	$(window).resize(function(){
 		pictures();
 	});
-
-
-
 
 });

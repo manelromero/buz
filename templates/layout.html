@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Buz-online</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+	<script src="{{url_for('static', filename='js/main.js')}}"></script>
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<header>
+
+			<!-- Burger menu -->
+			<nav class="burger-menu">
+				<ul class="menu-list">
+					<li class="menu-item">
+						<a href="{{url_for('home')}}" class="menu-link{% if active == 'home' %} active{% endif %}">Home</a>
+					</li>
+					<li class="menu-item">
+						<a href="{{url_for('about')}}" class="menu-link{% if active == 'about' %} active{% endif %}">About</a>
+					</li>
+					<li class="menu-item">
+						<a href="{{url_for('services')}}" class="menu-link{% if active == 'services' %} active{% endif %}">Services</a>
+					</li>
+					<li class="menu-item">
+						<a href="{{url_for('contact')}}" class="menu-link{% if active == 'contact' %} active{% endif %}">Contact Us</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- Top bar -->
+			<div class="top-bar">
+
+				<div class="logo">
+					<img src="{{url_for('static', filename='img/logo.svg')}}" class="logo-icon" alt="Logo">
+				</div>
+
+				<div class="name">
+					<p>buz-online.com</p>
+				</div>
+
+				<!-- Burger icon -->
+				<div class="burger">
+					<img id="burger-icon-open" class="burger-icon" src="{{url_for('static', filename='img/burger-open.svg')}}" alt="Menu">
+					<img id="burger-icon-close" class="burger-icon" src="{{url_for('static', filename='img/burger-close.svg')}}" alt="Menu">
+				</div>
+
+				<!-- Navigation bar -->
+				<nav class="menu">
+					<ul class="menu-list">
+						<li class="menu-item">
+							<a href="{{url_for('home')}}" class="menu-link{% if active == 'home' %} active{% endif %}">Home</a>
+						</li>
+						<li class="menu-item">
+							<a href="{{url_for('about')}}" class="menu-link{% if active == 'about' %} active{% endif %}">About</a>
+						</li>
+						<li class="menu-item">
+							<a href="{{url_for('services')}}" class="menu-link{% if active == 'services' %} active{% endif %}">Services</a>
+						</li>
+						<li class="menu-item">
+							<a href="{{url_for('contact')}}" class="menu-link{% if active == 'contact' %} active{% endif %}">Contact Us</a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+
+		</header>
+
+		<div class="container">
+			{%- block content -%}{%- endblock -%}
+		</div>
+
+		<footer>
+			{%- include 'footer.html' -%}
+			{%- block footer -%}{%- endblock -%}
+		</footer>
+	
+	</div>
+
+</body>
+</html>
