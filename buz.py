@@ -47,8 +47,8 @@ def smallbusiness():
 
 
 if __name__ == '__main__':
-    # freezer.freeze()
-    app.run(debug=True)
+    freezer.freeze()
+    app.run(host='0.0.0.0', debug=True)
 
     # if len(sys.argv) > 1 and sys.argv[1] == "build":
     #   freezer.freeze()
