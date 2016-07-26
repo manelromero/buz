@@ -6,42 +6,43 @@ from flask_frozen import Freezer
 app = Flask('__name__')
 freezer = Freezer(app)
 
-app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
+# app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
 app.config['FREEZER_DEFAULT_MIMETYPE'] = 'text/html; charset=utf-8'
 app.config['FREEZER_RELATIVE_URLS'] = True
 
+
 @app.route('/')
-@app.route('/home')
+@app.route('/home.html')
 def home():
     return render_template('home.html')
 
 
-@app.route('/about')
+@app.route('/about.html')
 def about():
     return render_template('about.html')
 
 
-@app.route('/services')
+@app.route('/services.html')
 def services():
     return render_template('services.html')
 
 
-@app.route('/contact')
+@app.route('/contact.html')
 def contact():
   return render_template('contact.html')
 
 
-@app.route('/startups')
+@app.route('/startups.html')
 def startups():
     return render_template('startups.html')
 
 
-@app.route('/franchisors')
+@app.route('/franchisors.html')
 def franchisors():
     return render_template('franchisors.html')
 
 
-@app.route('/smallbusiness')
+@app.route('/smallbusiness.html')
 def smallbusiness():
     return render_template('smallbusiness.html')
 
