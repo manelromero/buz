@@ -6,7 +6,7 @@ from flask_frozen import Freezer
 app = Flask('__name__')
 freezer = Freezer(app)
 
-# app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
+app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
 app.config['FREEZER_DEFAULT_MIMETYPE'] = 'text/html; charset=utf-8'
 app.config['FREEZER_RELATIVE_URLS'] = True
 
@@ -29,7 +29,7 @@ def services():
 
 @app.route('/contact.html')
 def contact():
-  return render_template('contact.html')
+    return render_template('contact.html')
 
 
 @app.route('/startups.html')
