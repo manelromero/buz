@@ -19,22 +19,47 @@
 		<div class="article-content">
 
 			<form class="contact" action="{{url_for('contact')}}" method="POST">
+
 				<div class="field">
-					{{form.name.label}}
+					{{form.name.label (autofocus='autofocus')}}
 					{{form.name}}
 				</div>
+				{%- if form.name.errors -%}
+					{%- for error in form.name.errors -%}
+						<div class="error">{{error}}</div>
+					{%- endfor -%}
+				{%- endif -%}
+
 				<div class="field">
 					{{form.email.label}}
 					{{form.email}}
 				</div>
+				{%- if form.email.errors -%}
+					{%- for error in form.email.errors -%}
+						<div class="error">{{error}}</div>
+					{%- endfor -%}
+				{%- endif -%}
+
 				<div class="field">
 					{{form.phone.label}}
 					{{form.phone}}
 				</div>
+				{%- if form.phone.errors -%}
+					{%- for error in form.phone.errors -%}
+						<div class="error">{{error}}</div>
+					{%- endfor -%}
+				{%- endif -%}
+
 				<div class="field">
 					{{form.message.label}}
 					{{form.message}}
 				</div>
+				{%- if form.message.errors -%}
+					{%- for error in form.message.errors -%}
+						<div class="error">{{error}}</div>
+					{%- endfor -%}
+				{%- endif -%}
+
 				<input type="submit" class="green-button form-submit" id="submit" value="Send">
 
 			</form>

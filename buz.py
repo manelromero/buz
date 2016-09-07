@@ -1,10 +1,21 @@
 from flask import Flask, render_template, request
+from flask_mail import Message, Mail
 from flask_frozen import Freezer
 from forms import ContactForm
 
 
 app = Flask('__name__')
 freezer = Freezer(app)
+
+mail = Mail()
+app.config['MAIL_SERVER'] = "authsmtp.manelromero.com"
+app.config['MAIL_PORT'] = 25
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_DEFAULT_SENDER'] = 'jander@example.com'
+app.config['MAIL_USERNAME'] = 'manel@manelromero.com'
+app.config['MAIL_PASSWORD'] = ''  # for production
+mail.init_app(app)
+
 
 app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
 app.config['FREEZER_DEFAULT_MIMETYPE'] = 'text/html; charset=utf-8'
@@ -30,9 +41,25 @@ def services():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm(request.form)
-    if request.method == 'POST':
-        print form.name.data
-    return render_template('contact.html', form=form)
+    if request.method == 'POST' and form.validate():
+        msg = Message(
+            subject='Web contact form from ' + form.name.data,
+            sender='jander@example.com',
+            recipients=['manel@manelromero.com'])
+        msg.html = '''
+            <b>Name:</b> %s <br>
+            <b>Email:</b> %s <br>
+            <b>Phone:</b> %s <br>
+            <b>Message:</b> %s <br>
+            ''' % (
+            form.name.data,
+            form.email.data,
+            form.phone.data,
+            form.message.data)
+        mail.send(msg)
+        return render_template('message_sent.html')
+    else:
+        return render_template('contact.html', form=form)
 
 
 @app.route('/startups')

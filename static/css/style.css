@@ -404,6 +404,12 @@ textarea {
 	margin: 2rem 0;
 }
 
+.error {
+	font: 400 0.9rem 'Open Sans', sans-serif;
+	color: red;
+	padding-bottom: 1rem;
+}
+
 /****************/
 /* Media queries*/
 /****************/
