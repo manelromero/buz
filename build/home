@@ -20,16 +20,16 @@
 			<nav class="burger-menu">
 				<ul class="menu-list">
 					<li class="menu-item">
-						<a href="home.html" class="menu-link active">Home</a>
+						<a href="home" class="menu-link active">Home</a>
 					</li>
 					<li class="menu-item">
-						<a href="about.html" class="menu-link">About</a>
+						<a href="about" class="menu-link">About</a>
 					</li>
 					<li class="menu-item">
-						<a href="services.html" class="menu-link">Services</a>
+						<a href="services" class="menu-link">Services</a>
 					</li>
 					<li class="menu-item">
-						<a href="contact.html" class="menu-link">Contact Us</a>
+						<a href="contact" class="menu-link">Contact Us</a>
 					</li>
 				</ul>
 			</nav>
@@ -55,16 +55,16 @@
 				<nav class="menu">
 					<ul class="menu-list">
 						<li class="menu-item">
-							<a href="home.html" class="menu-link active">Home</a>
+							<a href="home" class="menu-link active">Home</a>
 						</li>
 						<li class="menu-item">
-							<a href="about.html" class="menu-link">About</a>
+							<a href="about" class="menu-link">About</a>
 						</li>
 						<li class="menu-item">
-							<a href="services.html" class="menu-link">Services</a>
+							<a href="services" class="menu-link">Services</a>
 						</li>
 						<li class="menu-item">
-							<a href="contact.html" class="menu-link">Contact Us</a>
+							<a href="contact" class="menu-link">Contact Us</a>
 						</li>
 					</ul>
 				</nav>
@@ -81,15 +81,15 @@
 		<section>
 			<div class="article-content">
 				<div class="button-bar">
-					<a href="startups.html" class="green-button">Startups</a>
-					<a href="franchisors.html" class="blue-button">Franchisors</a>
-					<a href="smallbusiness.html" class="green-button">Small Business</a>
+					<a href="startups" class="green-button">Startups</a>
+					<a href="franchisors" class="blue-button">Franchisors</a>
+					<a href="smallbusiness" class="green-button">Small Business</a>
 				</div>
 			</div>
 		</section>
 		<section>
 			<div class="article-content">
-				<p>We love small businesses! We think you guys are brave and creative, and so <a href="smallbusiness.html" class="underline">we are</a>.</p>
+				<p>We love small businesses! We think you guys are brave and creative, and so <a href="smallbusiness" class="underline">we are</a>.</p>
 			</div>
 		</section>
 		<section class="outstand">
@@ -128,7 +128,7 @@
 		</div>
 		<div class="article note">
 			<div class="article-content appear">
-				<p>Do you own a small business, a franchise or a start-up and want to grow with us? <a href="contact.html" class="underline">Contact us</a> today and book your free assessment. After all, we worked at <strong>Google</strong>, and know how to help you.</p>
+				<p>Do you own a small business, a franchise or a start-up and want to grow with us? <a href="contact" class="underline">Contact us</a> today and book your free assessment. After all, we worked at <strong>Google</strong>, and know how to help you.</p>
 			</div>
 		</div>
 	</div></div>

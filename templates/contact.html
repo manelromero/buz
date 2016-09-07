@@ -18,7 +18,26 @@
 
 		<div class="article-content">
 
-			<p>If you want to contact us, please send us a message to <a href="mailto:kate@buz-online.com" class="underline">kate@buz-online.com</a></p>
+			<form class="contact" action="{{url_for('contact')}}" method="POST">
+				<div class="field">
+					{{form.name.label}}
+					{{form.name}}
+				</div>
+				<div class="field">
+					{{form.email.label}}
+					{{form.email}}
+				</div>
+				<div class="field">
+					{{form.phone.label}}
+					{{form.phone}}
+				</div>
+				<div class="field">
+					{{form.message.label}}
+					{{form.message}}
+				</div>
+				<input type="submit" class="green-button form-submit" id="submit" value="Send">
+
+			</form>
 
 		</div>
 

@@ -7,7 +7,7 @@
 }
 
 html {
-	font-size: 100%;
+	font-size: 95%;
 }
 
 body {
@@ -45,7 +45,7 @@ h3 {
 
 section {
 	width: 100%;
-	padding: 1rem 0;
+	padding: 2rem 0;
 }
 
 footer {
@@ -358,12 +358,52 @@ footer {
 	border-bottom-color: rgba(187, 245, 71, 1);
 }
 
+.contact {
+	width: 100%;
+	text-align: left;
+}
+
+label {
+	width: 100%;
+	color: #056b37;
+}
+
+input,
+textarea {
+	width: 100%;
+	font: 400 1rem/1.5rem 'Open Sans', sans-serif;
+    padding: 0.3rem;
+    margin: 0.5rem 0;
+    outline: 0;
+    border: 1px solid #056b37;
+    border-radius: 2px;
+    background-color: rgba(165, 193, 107, 0.1);
+    color: #000;
+    -webkit-appearance: none;
+}
+
+textarea {
+	min-height: 8rem;
+}
+
+.field {
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.form-submit {
+	min-width: 0;
+	max-width: 150px;
+	margin: 2rem 0;
+}
+
 /****************/
 /* Media queries*/
 /****************/
 @media screen and (min-width: 540px) {
 
-	section,
 	.article {
 		padding: 2rem 0;
 	}
@@ -387,12 +427,18 @@ footer {
 	    border-radius: 4px;
 	}
 
+	input,
+	textarea {
+		max-width: 475px;
+	}
+
+
 }
 
 @media screen and (min-width: 768px) {
 
 	html {
-		font-size: 110%;
+		font-size: 105%;
 	}
 
 	.burger {
@@ -440,7 +486,7 @@ footer {
 @media screen and (min-width: 992px) {
 
 	html {
-		font-size: 115%;
+		font-size: 110%;
 	}
 
 	.picture-text {

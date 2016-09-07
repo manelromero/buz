@@ -20,16 +20,16 @@
 			<nav class="burger-menu">
 				<ul class="menu-list">
 					<li class="menu-item">
-						<a href="home.html" class="menu-link">Home</a>
+						<a href="home" class="menu-link">Home</a>
 					</li>
 					<li class="menu-item">
-						<a href="about.html" class="menu-link">About</a>
+						<a href="about" class="menu-link">About</a>
 					</li>
 					<li class="menu-item">
-						<a href="services.html" class="menu-link">Services</a>
+						<a href="services" class="menu-link">Services</a>
 					</li>
 					<li class="menu-item">
-						<a href="contact.html" class="menu-link active">Contact Us</a>
+						<a href="contact" class="menu-link">Contact Us</a>
 					</li>
 				</ul>
 			</nav>
@@ -55,16 +55,16 @@
 				<nav class="menu">
 					<ul class="menu-list">
 						<li class="menu-item">
-							<a href="home.html" class="menu-link">Home</a>
+							<a href="home" class="menu-link">Home</a>
 						</li>
 						<li class="menu-item">
-							<a href="about.html" class="menu-link">About</a>
+							<a href="about" class="menu-link">About</a>
 						</li>
 						<li class="menu-item">
-							<a href="services.html" class="menu-link">Services</a>
+							<a href="services" class="menu-link">Services</a>
 						</li>
 						<li class="menu-item">
-							<a href="contact.html" class="menu-link active">Contact Us</a>
+							<a href="contact" class="menu-link">Contact Us</a>
 						</li>
 					</ul>
 				</nav>
@@ -73,32 +73,24 @@
 
 		</header>
 
-		<div class="container">
-<!-- Services -->
-<div class="tab">
-
-	<section class="outstand">
-
-		<div class="article-content">
-
-			<h2 class="negative left">Contact us</h2>
-
+		<div class="container"><!-- Franchisors -->
+	<div class="tab">
+		<div class="head-picture">
+			<img src="static/img/franchisors.png" class="head-picture" alt="Franchisors">
 		</div>
-
-	</section>
-
-	<section>
-
-		<div class="article-content">
-
-			<p>If you want to contact us, please send us a message to <a href="mailto:kate@buz-online.com" class="underline">kate@buz-online.com</a></p>
-
-		</div>
-
-	</section>
-
-</div>
-</div>
+		<div id="picture-franchisors"></div>
+		<section class="outstand">
+			<div class="article-content">
+				<h2 class="negative left">Franchisors</h2>
+			</div>
+		</section>
+		<section>
+			<div class="article-content">
+				<p>If you own a business and looking to expand it abroad through franchise system, we are here to help.</p>
+				<p>We collaborate with successful Master Franchisee Broker and Franchise consultancy firm - Franchise World Link - and can connect you with the experts in order to grow your business through franchise model in Europe, Asia and Africa. Please contact us for more information.</p>
+			</div>
+		</section>
+	</div></div>
 
 		<footer><div class="article-content">
 		<div class="social">

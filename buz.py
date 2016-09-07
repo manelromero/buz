@@ -1,6 +1,6 @@
-import sys
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_frozen import Freezer
+from forms import ContactForm
 
 
 app = Flask('__name__')
@@ -12,43 +12,46 @@ app.config['FREEZER_RELATIVE_URLS'] = True
 
 
 @app.route('/')
-@app.route('/home.html')
+@app.route('/home')
 def home():
     return render_template('home.html')
 
 
-@app.route('/about.html')
+@app.route('/about')
 def about():
     return render_template('about.html')
 
 
-@app.route('/services.html')
+@app.route('/services')
 def services():
     return render_template('services.html')
 
 
-@app.route('/contact.html')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    return render_template('contact.html')
+    form = ContactForm(request.form)
+    if request.method == 'POST':
+        print form.name.data
+    return render_template('contact.html', form=form)
 
 
-@app.route('/startups.html')
+@app.route('/startups')
 def startups():
     return render_template('startups.html')
 
 
-@app.route('/franchisors.html')
+@app.route('/franchisors')
 def franchisors():
     return render_template('franchisors.html')
 
 
-@app.route('/smallbusiness.html')
+@app.route('/smallbusiness')
 def smallbusiness():
     return render_template('smallbusiness.html')
 
 
 if __name__ == '__main__':
-    freezer.freeze()
+    # freezer.freeze()
     app.run(host='0.0.0.0', debug=True)
 
     # if len(sys.argv) > 1 and sys.argv[1] == "build":
