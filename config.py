@@ -1,0 +1,6 @@
+MAIL_SERVER = ''
+MAIL_PORT = 25
+MAIL_USE_SSL = False
+MAIL_DEFAULT_SENDER = 'webform@buz-online.com'
+MAIL_USERNAME = ''
+MAIL_PASSWORD = ''

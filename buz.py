@@ -1,25 +1,19 @@
 from flask import Flask, render_template, request
 from flask_mail import Message, Mail
-from flask_frozen import Freezer
 from forms import ContactForm
 
 
 app = Flask('__name__')
-freezer = Freezer(app)
+# config file for production
+# app.config.from_object('config')
+
+# config file por development
+config_file_path = app.instance_path + '/config.py'
+app.config.from_pyfile(config_file_path)
+
 
 mail = Mail()
-app.config['MAIL_SERVER'] = "authsmtp.manelromero.com"
-app.config['MAIL_PORT'] = 25
-app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_DEFAULT_SENDER'] = 'jander@example.com'
-app.config['MAIL_USERNAME'] = 'manel@manelromero.com'
-app.config['MAIL_PASSWORD'] = ''  # for production
 mail.init_app(app)
-
-
-app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
-app.config['FREEZER_DEFAULT_MIMETYPE'] = 'text/html; charset=utf-8'
-app.config['FREEZER_RELATIVE_URLS'] = True
 
 
 @app.route('/')
@@ -44,7 +38,6 @@ def contact():
     if request.method == 'POST' and form.validate():
         msg = Message(
             subject='Web contact form from ' + form.name.data,
-            sender='jander@example.com',
             recipients=['manel@manelromero.com'])
         msg.html = '''
             <b>Name:</b> %s <br>
@@ -78,10 +71,4 @@ def smallbusiness():
 
 
 if __name__ == '__main__':
-    # freezer.freeze()
     app.run(host='0.0.0.0', debug=True)
-
-    # if len(sys.argv) > 1 and sys.argv[1] == "build":
-    #   freezer.freeze()
-    # else:
-    #   app.run(debug=True)
