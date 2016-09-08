@@ -1,28 +1,15 @@
-{% extends "layout.html" %}
-{% set active = "contact" %}
-{% block content %}
-<!-- Services -->
+{%- extends "layout.html" -%}
+{%- set active = "contact" -%}
+{%- block content -%}
+<!-- Message -->
 <div class="tab">
-
-	<section class="outstand">
-
-		<div class="article-content">
-
-			<h2 class="negative left">Contact us</h2>
-
-		</div>
-
-	</section>
-
 	<section>
-
-		<div class="article-content">
-
-			Message sent
-
+		<div class="message">
+			Message sent, thanks for contacting us.
 		</div>
-
+		<div class="button-bar">
+			<a href="{{url_for('home')}}" class="green-button form-submit">Back to home</a>
+		</div>
 	</section>
-
 </div>
-{% endblock %}
+{%- endblock -%}

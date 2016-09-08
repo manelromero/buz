@@ -1,63 +1,63 @@
 {%- extends "layout.html" -%}
 {%- set active = "home" -%}
 {%- block content -%}
-	<!-- Home -->
-	<div class="tab">
-		<div id="picture-home">
-			<p class="picture-text">You have big dreams and we want to help you achieve them</p>
-		</div>
-		<section>
-			<div class="article-content">
-				<div class="button-bar">
-					<a href="{{url_for('startups')}}" class="green-button">Startups</a>
-					<a href="{{url_for('franchisors')}}" class="blue-button">Franchisors</a>
-					<a href="{{url_for('smallbusiness')}}" class="green-button">Small Business</a>
-				</div>
-			</div>
-		</section>
-		<section>
-			<div class="article-content">
-				<p>We love small businesses! We think you guys are brave and creative, and so <a href="{{url_for('smallbusiness')}}" class="underline">we are</a>.</p>
-			</div>
-		</section>
-		<section class="outstand">
-			<div class="article-content">
-				<p>You have too many things to do and have no time to analyse the information available to you in order to make the right decisions. We are here to help!</p>
-				<p>We know that small businesses are struggling to understand the online world and how they can benefit from it in order to fuel their growth.</p>
-				<p>We want to help your small business, franchise or start-up to grow and we want to grow with you!</p>
-			</div>
-		</section>
-		<section class="appear">
-			<div class="article-content">
-				<h1>How will we help you grow?</h1>
-			</div>
-		</section>
-		<div class="article">
-			<div class="article-content appear">
-				<img src="{{url_for('static', filename='img/plant.png')}}" class="section-picture" alt="Seed">
-				<h2>Plant the seed</h2>
-				<p>We plant the seed or in the online world we will build an effective Website which will help you to find the right customers for your business. SEO and Analytics are included in the package! You will be able to target the right audience from the beginning and understand your statistics through monthly Analytics reports! Yes, we will gather statistics available to you and help you understand them.</p>
-				<p>If you already have a website, we will help you analyse your numbers and improve it.</p>
+<!-- Home -->
+<div class="tab">
+	<div id="picture-home">
+		<p class="picture-text">You have big dreams and we want to help you achieve them</p>
+	</div>
+	<section>
+		<div class="article-content">
+			<div class="button-bar">
+				<a href="{{url_for('startups')}}" class="green-button">Startups</a>
+				<a href="{{url_for('franchisors')}}" class="blue-button">Franchisors</a>
+				<a href="{{url_for('smallbusiness')}}" class="green-button">Small Business</a>
 			</div>
 		</div>
-		<div class="article">
-			<div class="article-content appear">
-				<img src="{{url_for('static', filename='img/grow.png')}}" class="section-picture" alt="Grow">
-				<h2>Grow</h2>
-				<p>We will then help you grow or in the online world we will be growing your client base. If your product or service needs better positioning online, we will help you build an effective landing page in order to attract the right audience. We will then advertise your product or services to the right audience on the right channels to help you grow. We will show you the statistics and help you understand the numbers available to you in order to make the right decisions and grow further.</p>
-			</div>
+	</section>
+	<section>
+		<div class="article-content">
+			<p>We love small businesses! We think you guys are brave and creative, and so <a href="{{url_for('smallbusiness')}}" class="underline">we are</a>.</p>
 		</div>
-		<div class="article">
-			<div class="article-content appear">
-				<img src="{{url_for('static', filename='img/blossom.png')}}" class="section-picture" alt="Blossom">
-				<h2>Blossom</h2>
-				<p>We will help you blossom. Once we see that you are growing and ready to expand further, we will bring your campaigns to the next level and replicate your success on the additional marketing channels to enable you to grow further within your country or abroad. Want to advertise to expats living in Thailand, for example? We know how!</p>
-			</div>
+	</section>
+	<section class="outstand">
+		<div class="article-content">
+			<p>You have too many things to do and have no time to analyse the information available to you in order to make the right decisions. We are here to help!</p>
+			<p>We know that small businesses are struggling to understand the online world and how they can benefit from it in order to fuel their growth.</p>
+			<p>We want to help your small business, franchise or start-up to grow and we want to grow with you!</p>
 		</div>
-		<div class="article note">
-			<div class="article-content appear">
-				<p>Do you own a small business, a franchise or a start-up and want to grow with us? <a href="{{url_for('contact')}}" class="underline">Contact us</a> today and book your free assessment. After all, we worked at <strong>Google</strong>, and know how to help you.</p>
-			</div>
+	</section>
+	<section class="appear">
+		<div class="article-content">
+			<h1>How will we help you grow?</h1>
+		</div>
+	</section>
+	<div class="article">
+		<div class="article-content appear">
+			<img src="{{url_for('static', filename='img/plant.png')}}" class="section-picture" alt="Seed">
+			<h2>Plant the seed</h2>
+			<p>We plant the seed or in the online world we will build an effective Website which will help you to find the right customers for your business. SEO and Analytics are included in the package! You will be able to target the right audience from the beginning and understand your statistics through monthly Analytics reports! Yes, we will gather statistics available to you and help you understand them.</p>
+			<p>If you already have a website, we will help you analyse your numbers and improve it.</p>
 		</div>
 	</div>
+	<div class="article">
+		<div class="article-content appear">
+			<img src="{{url_for('static', filename='img/grow.png')}}" class="section-picture" alt="Grow">
+			<h2>Grow</h2>
+			<p>We will then help you grow or in the online world we will be growing your client base. If your product or service needs better positioning online, we will help you build an effective landing page in order to attract the right audience. We will then advertise your product or services to the right audience on the right channels to help you grow. We will show you the statistics and help you understand the numbers available to you in order to make the right decisions and grow further.</p>
+		</div>
+	</div>
+	<div class="article">
+		<div class="article-content appear">
+			<img src="{{url_for('static', filename='img/blossom.png')}}" class="section-picture" alt="Blossom">
+			<h2>Blossom</h2>
+			<p>We will help you blossom. Once we see that you are growing and ready to expand further, we will bring your campaigns to the next level and replicate your success on the additional marketing channels to enable you to grow further within your country or abroad. Want to advertise to expats living in Thailand, for example? We know how!</p>
+		</div>
+	</div>
+	<div class="article note">
+		<div class="article-content appear">
+			<p>Do you own a small business, a franchise or a start-up and want to grow with us? <a href="{{url_for('contact')}}" class="underline">Contact us</a> today and book your free assessment. After all, we worked at <strong>Google</strong>, and know how to help you.</p>
+		</div>
+	</div>
+</div>
 {%- endblock -%}

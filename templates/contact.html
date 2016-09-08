@@ -1,25 +1,16 @@
-{% extends "layout.html" %}
-{% set active = "contact" %}
-{% block content %}
-<!-- Services -->
+{%- extends "layout.html" -%}
+{%- set active = "contact" -%}
+{%- block content -%}
+<!-- Contact -->
 <div class="tab">
-
 	<section class="outstand">
-
 		<div class="article-content">
-
-			<h2 class="negative left">Contact us</h2>
-
+			<h2 class="negative left">Contact</h2>
 		</div>
-
 	</section>
-
 	<section>
-
 		<div class="article-content">
-
 			<form class="contact" action="{{url_for('contact')}}" method="POST">
-
 				<div class="field">
 					{{form.name.label (autofocus='autofocus')}}
 					{{form.name}}
@@ -29,7 +20,6 @@
 						<div class="error">{{error}}</div>
 					{%- endfor -%}
 				{%- endif -%}
-
 				<div class="field">
 					{{form.email.label}}
 					{{form.email}}
@@ -39,7 +29,6 @@
 						<div class="error">{{error}}</div>
 					{%- endfor -%}
 				{%- endif -%}
-
 				<div class="field">
 					{{form.phone.label}}
 					{{form.phone}}
@@ -49,7 +38,6 @@
 						<div class="error">{{error}}</div>
 					{%- endfor -%}
 				{%- endif -%}
-
 				<div class="field">
 					{{form.message.label}}
 					{{form.message}}
@@ -59,14 +47,9 @@
 						<div class="error">{{error}}</div>
 					{%- endfor -%}
 				{%- endif -%}
-
 				<input type="submit" class="green-button form-submit" id="submit" value="Send">
-
 			</form>
-
 		</div>
-
 	</section>
-
 </div>
-{% endblock %}
+{%- endblock -%}

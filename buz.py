@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from flask_mail import Message, Mail
 from forms import ContactForm
+import os
 
 
 app = Flask('__name__')
@@ -8,10 +9,12 @@ app = Flask('__name__')
 # app.config.from_object('config')
 
 # config file por development
+app.instance_path = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), 'instance'))
 config_file_path = app.instance_path + '/config.py'
 app.config.from_pyfile(config_file_path)
 
-
+# Initiate mail
 mail = Mail()
 mail.init_app(app)
 
@@ -36,19 +39,20 @@ def services():
 def contact():
     form = ContactForm(request.form)
     if request.method == 'POST' and form.validate():
+        message = form.message.data.replace('\n', '<br>')
         msg = Message(
             subject='Web contact form from ' + form.name.data,
             recipients=['manel@manelromero.com'])
         msg.html = '''
             <b>Name:</b> %s <br>
             <b>Email:</b> %s <br>
-            <b>Phone:</b> %s <br>
-            <b>Message:</b> %s <br>
+            <b>Phone:</b> %s <br><br>
+            <b>Message</b><br><br> %s
             ''' % (
             form.name.data,
             form.email.data,
             form.phone.data,
-            form.message.data)
+            message)
         mail.send(msg)
         return render_template('message_sent.html')
     else:
