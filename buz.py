@@ -1,18 +1,18 @@
 from flask import Flask, render_template, request
 from flask_mail import Message, Mail
 from forms import ContactForm
-import os
+# import os
 
 
 app = Flask('__name__')
 # config file for production
-# app.config.from_object('config')
+app.config.from_object('config')
 
 # config file por development
-app.instance_path = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), 'instance'))
-config_file_path = app.instance_path + '/config.py'
-app.config.from_pyfile(config_file_path)
+# app.instance_path = os.path.abspath(
+#     os.path.join(os.path.dirname(__file__), 'instance'))
+# config_file_path = app.instance_path + '/config.py'
+# app.config.from_pyfile(config_file_path)
 
 # Initiate mail
 mail = Mail()
@@ -42,7 +42,7 @@ def contact():
         message = form.message.data.replace('\n', '<br>')
         msg = Message(
             subject='Web contact form from ' + form.name.data,
-            recipients=['manel@manelromero.com'])
+            recipients=['info@buz-online.com'])
         msg.html = '''
             <b>Name:</b> %s <br>
             <b>Email:</b> %s <br>
@@ -75,4 +75,5 @@ def smallbusiness():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    # app.run(host='0.0.0.0', debug=True)
+    app.run()
