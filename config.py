@@ -1,6 +1,6 @@
-MAIL_SERVER = 'authsmtp.buz-online.com'
+MAIL_SERVER = ''
 MAIL_PORT = 25
 MAIL_USE_SSL = False
-MAIL_DEFAULT_SENDER = 'contact-form@buz-online.com'
-MAIL_USERNAME = 'contact-form@buz-online.com'
+MAIL_DEFAULT_SENDER = ''
+MAIL_USERNAME = ''
 MAIL_PASSWORD = ''
